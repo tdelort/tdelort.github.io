@@ -1,1 +1,0 @@
-# tdelort.github.io
