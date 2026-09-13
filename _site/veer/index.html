@@ -29,7 +29,7 @@
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Miette&#39;s blog">
 <meta property="og:title" content="Veer Framework">
-<meta property="og:url" content="http://localhost:4000/portfolio/veer/">
+<meta property="og:url" content="http://localhost:4000/veer/">
 
 
   <meta property="og:description" content="A HAL with many helpers to create a custom game engine with very few dependencies">
@@ -45,14 +45,14 @@
 
 
 
-  <meta property="article:published_time" content="2026-09-13T11:36:25+02:00">
+  <meta property="article:published_time" content="2026-09-13T13:16:47+02:00">
 
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/portfolio/veer/">
+<link rel="canonical" href="http://localhost:4000/veer/">
 
 
 
@@ -270,7 +270,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/portfolio/veer/" itemprop="url">Veer Framework
+            <a href="http://localhost:4000/veer/" itemprop="url">Veer Framework
 </a>
           </h1>
           
@@ -286,9 +286,13 @@
 
 <p>You can find the code of the framework <a href="https://github.com/tdelort/Veer">here on Github</a>.</p>
 
+<p>The rest of this page are nice techniques I encountered / used during the development of Veer.</p>
+
 <h2 id="fusion-like-multi-platform-code">Fusion-like multi-platform code</h2>
 
-<p>One very fun idea borrowed from <a href="https://enginearchitecture.org/downloads/REAC_2025_Anvil.pdf">Ubisoft 2025 talk at REAC</a>, is the way they implement class differently on multiple platforms by using one common <code class="language-plaintext highlighter-rouge">.h</code> header, different <code class="language-plaintext highlighter-rouge">.cpp</code> depending on the backend (pretty standard here), but injecting code inside the header to add platform specific class members.</p>
+<p class="notice--info"><strong>TODO</strong> : turn this part into a blog post and just link it here</p>
+
+<p>One very fun idea borrowed from <a href="https://enginearchitecture.org/downloads/REAC_2025_Anvil.pdf">Ubisoft 2025 talk at REAC</a>, is the way they implement class differently on multiple platforms by using one common <code class="language-plaintext highlighter-rouge">.h</code> header, different <code class="language-plaintext highlighter-rouge">.cpp</code> depending on the backend (pretty standard here), but injecting code inside the header to add platform specific class members, in their Fusion HAL.</p>
 
 <p>Inside command_queue.h, we have our class declaration as usual, but with some (quite ugly for now) <code class="language-plaintext highlighter-rouge">#if defined</code> clauses to inject some platform specific code  :</p>
 
@@ -327,12 +331,28 @@
 </pre></td></tr></tbody></table></code></pre></figure>
 
 <p>dx12_command_queue.inl then contains the API specific part of the header :</p>
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">private:</span>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre><span class="nl">private:</span>
     <span class="n">ComPtr</span><span class="o">&lt;</span><span class="n">ID3D12CommandQueue</span><span class="o">&gt;</span> <span class="n">m_command_queue_api_handle</span><span class="p">;</span>
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></figure>
 
 <p>And finally, in command_queue.cpp, we can implement the class like if we were working only on a D3D12 renderer :</p>
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">command_queue</span><span class="o">::</span><span class="n">command_queue</span><span class="p">(</span><span class="n">render_device</span><span class="o">&amp;</span> <span class="n">_device</span><span class="p">,</span> <span class="n">command_buffer</span><span class="o">::</span><span class="n">type</span> <span class="n">_type</span><span class="p">)</span>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="code"><pre><span class="n">command_queue</span><span class="o">::</span><span class="n">command_queue</span><span class="p">(</span><span class="n">render_device</span><span class="o">&amp;</span> <span class="n">_device</span><span class="p">,</span> <span class="n">command_buffer</span><span class="o">::</span><span class="n">type</span> <span class="n">_type</span><span class="p">)</span>
     <span class="o">:</span> <span class="n">m_type</span><span class="p">{</span><span class="n">_type</span><span class="p">}</span>
 <span class="p">{</span>
     <span class="n">D3D12_COMMAND_QUEUE_DESC</span> <span class="n">desc</span> <span class="o">=</span> <span class="p">{};</span>
@@ -344,7 +364,45 @@
     <span class="n">HRESULT</span> <span class="n">hr</span> <span class="o">=</span> <span class="n">_device</span><span class="p">.</span><span class="n">get_api_handle</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">CreateCommandQueue</span><span class="p">(</span><span class="o">&amp;</span><span class="n">desc</span><span class="p">,</span> <span class="n">IID_PPV_ARGS</span><span class="p">(</span><span class="o">&amp;</span><span class="n">m_command_queue_api_handle</span><span class="p">));</span>
     <span class="n">VEER_ASSERT</span><span class="p">(</span><span class="n">SUCCEEDED</span><span class="p">(</span><span class="n">hr</span><span class="p">),</span> <span class="s">"Failed to create command queue ("</span> <span class="o">&lt;&lt;</span> <span class="n">hr</span> <span class="o">&lt;&lt;</span> <span class="s">")"</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>This might look ugly and complicated for something you can simply do with inheritance (<code class="language-plaintext highlighter-rouge">command_queue</code> being specialized into <code class="language-plaintext highlighter-rouge">dx12_command_queue</code>), but there are actually so many advantages.</p>
+
+<p>First of all, I switched to this when I tried to implement a class hierarchy in a platform agnostic way. For example, something like this :</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="code"><pre><span class="k">class</span> <span class="nc">render_device_resource</span>
+<span class="p">{};</span>
+
+<span class="k">class</span> <span class="nc">render_device_buffer</span> <span class="o">:</span> <span class="k">public</span> <span class="n">render_device_resource</span> 
+<span class="p">{};</span>
+
+<span class="k">class</span> <span class="nc">render_device_texture_base</span> <span class="o">:</span> <span class="k">public</span> <span class="n">render_device_resource</span> 
+<span class="p">{};</span>
+
+<span class="k">class</span> <span class="nc">render_device_texture_2d</span> <span class="o">:</span> <span class="k">public</span> <span class="n">render_device_texture_base</span> 
+<span class="p">{};</span>
+
+<span class="k">class</span> <span class="nc">render_device_texture_3d</span> <span class="o">:</span> <span class="k">public</span> <span class="n">render_device_texture_base</span> 
+<span class="p">{};</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>If you need to implement the different backends using inheritance, you either get a very complicated class hierarchy, or some weird patterns to prevent code duplication.</p>
+
+<p>This technique also allows for simpler implementation, since you basically implement the base class without worrying about other backends. The code formatter and syntax highlighting don’t have this much trouble with it, and the drawbacks of having to can be alleviated with a bit of macro tricks / build system magic (this is still a TODO).</p>
 
         
       </section>
@@ -368,19 +426,19 @@
 <section class="page__share">
   <h4 class="page__share-title">Share on</h4>
 
-  <a href="https://x.com/intent/tweet?text=Veer+Framework%20http%3A%2F%2Flocalhost%3A4000%2Fportfolio%2Fveer%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
+  <a href="https://x.com/intent/tweet?text=Veer+Framework%20http%3A%2F%2Flocalhost%3A4000%2Fveer%2F" class="btn btn--x" aria-label="Share on X" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on X">
     <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
   </a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fportfolio%2Fveer%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fveer%2F" class="btn btn--facebook" aria-label="Share on Facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook">
     <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
   </a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/portfolio/veer/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/veer/" class="btn btn--linkedin" aria-label="Share on LinkedIn" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn">
     <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
   </a>
 
-  <a href="https://bsky.app/intent/compose?text=Veer+Framework%20http%3A%2F%2Flocalhost%3A4000%2Fportfolio%2Fveer%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
+  <a href="https://bsky.app/intent/compose?text=Veer+Framework%20http%3A%2F%2Flocalhost%3A4000%2Fveer%2F" class="btn btn--bluesky" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Bluesky">
     <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
   </a>
 </section>
@@ -390,10 +448,10 @@
 
   <nav class="pagination" aria-label="Post pagination">
     
-      <a href="/portfolio/greedfall2/" class="pagination--pager" title="GreedFall: The Dying World">Previous</a>
+      <a href="/greedfall-tdw/" class="pagination--pager" title="GreedFall: The Dying World">Previous</a>
     
     
-      <a href="#" class="pagination--pager disabled">Next</a>
+      <a href="/physics_engine" class="pagination--pager" title="School Project : Physics Engine">Next</a>
     
   </nav>
 

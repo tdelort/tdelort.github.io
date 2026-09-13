@@ -1,5 +1,6 @@
 ---
 title: "GreedFall: The Dying World"
+permalink: /greedfall-tdw/
 excerpt: "Non exhaustive list of subjects I worked on during the production of the second GreedFall opus at Spiders"
 header:
   image: /assets/images/portfolio/greedfall2/header.png
