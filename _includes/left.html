@@ -1,0 +1,48 @@
+<div class="left">
+    <div class="left-title">
+        <a class="invisible_link" href="{{ site.url | relative_url }}">
+            <h1>{{ site.title }}</h1>
+        </a>
+        <p>{{ site.subtitle }}</p>
+        <hr class="hr-0"/>
+    </div>
+    <div class="left-author">
+        <!--<div class="avatar-container">
+            <img class="avatar" src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}">
+        </div>-->
+        <h2>{{ site.author.name }}</h2>
+        <p>{{ site.author.bio }}</p>
+        <hr class="hr-1"/>
+    </div>
+    <div class="left-navigation">
+        <nav>
+            <ul>
+            {% for nav in site.data.navigation.main %}
+                {% if nav.url == page.permalink %}
+                    <li class="navigation-active">
+                {% else %} 
+                    <li class="navigation-inactive">
+                {% endif %}
+                        <a class="invisible_link" href="{{ nav.url | relative_url }}">
+                            <span class="navigation-label">{{ nav.title }}</span>
+                        </a>
+                    </li>
+            {% endfor %}
+            </ul>
+        </nav> 
+        <hr class="hr-2"/>
+    </div>
+    <div class="left-links">
+        <hr class="hr-3"/>
+        <ul>
+        {% for link in site.author.links %}
+            <li>
+                <a class="invisible_link" href="{{ link.url | relative_url }}">
+                    <img class="left-links-icon" src="{{ link.icon | relative_url }}" alt="{{ link.label }}">
+                    <span class="left-links-label">{{ link.label }}</span>
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>

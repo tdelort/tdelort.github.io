@@ -5,24 +5,16 @@ name: "Tristan Delort"
 url: "https://tdelort.github.io/"
 repository: "tdelort/tdelort.github.io"
 
-remote_theme: "mmistakes/minimal-mistakes@4.28.0"
-minimal_mistakes_skin: "dirt" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+plugins:
+  - jekyll-feed
 
 markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
-
-locale: "en-GB"
-show_date: true
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
 
 defaults:
   # _posts
@@ -30,25 +22,24 @@ defaults:
       path: "_posts"
       type: posts
     values:
+      layout: post
       author_profile: true
       comments: true
-      share: true
-      related: true
   # _pages
   - scope:
       path: "_pages"
       type: pages
     values:
+      layout: default
       author_profile: true
-      layout: single
+      comments: true
   # _portfolio
   - scope:
       path: ""
       type: portfolio
     values:
-      layout: single
       author_profile: true
-      share: true
+      comments: true
 
 comments:
   provider: "utterances"
@@ -64,14 +55,22 @@ collections:
 
 author:
   name     : "Tristan Delort"
-  avatar   : "/assets/images/profile_placeholder_0.jpg" # TODO : add image
+  avatar   : "/assets/images/profile_placeholder_0.jpg"
   bio      : "Rendering Engineer. Worked at Spiders on GreedFall : The Dying World"
   location : "IDF, France"
-  # fediverse: "@you@instance.social"
   links:
     - label: "GitHub"
-      icon: "fab fa-fw fa-github"
+      icon: "/assets/images/github_icon.svg"
       url: "https://github.com/tdelort"
+    - label: "LinkedIn"
+      icon: "/assets/images/linkedin_icon.png"
+      url: "https://www.linkedin.com/in/tristan-delort/"
+    - label: "Email"
+      icon: "/assets/images/mail_icon.svg"
+      url: "mailto:tristan.delort@gmail.com"
+    - label: "RSS"
+      icon: "/assets/images/rss_icon.svg"
+      url: "/feed.xml"
 
 include:
   - _pages

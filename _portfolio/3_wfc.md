@@ -23,14 +23,10 @@ One key idea that could be added is the possibility to make the generation infin
 
 ## Pretty Pictures
 
-![Image]({{site.baseurl}}/assets/images/portfolio/wfc/wfc_modules.png)  
-*Overview of the different modules*
+{% include image.html path="/assets/images/portfolio/wfc/wfc_modules.png" alt="Image" caption="Overview of the different modules" %}  
 
-![Image]({{site.baseurl}}/assets/images/portfolio/wfc/top_down_view.png)  
-*Top down view of a chunk generated using the WFC algorithm*
+{% include image.html path="/assets/images/portfolio/wfc/top_down_view.png" alt="Image" caption="Top down view of a chunk generated using the WFC algorithm" %}  
 
-![Image]({{site.baseurl}}/assets/images/portfolio/wfc/inside_1.png)  
-*Inside view with walls colored according to their normal*
+{% include image.html path="/assets/images/portfolio/wfc/inside_1.png" alt="Image" caption="Inside view with walls colored according to their normal" %}  
 
-![Image]({{site.baseurl}}/assets/images/portfolio/wfc/inside_0.png)  
-*Inside view with walls colored according to their normal*
+{% include image.html path="/assets/images/portfolio/wfc/inside_0.png" alt="Image" caption="Inside view with walls colored according to their normal" %}  

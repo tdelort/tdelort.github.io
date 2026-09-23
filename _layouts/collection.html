@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+{% if page.title %}
+<h1>{{ page.title }}</h1>
+<hr/>
+{% endif %}
+
+{% include collection.html 
+    entries_layout=page.entries_layout 
+    collection=page.collection
+    include_date=page.include_date
+%}

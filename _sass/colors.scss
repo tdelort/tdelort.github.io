@@ -1,0 +1,32 @@
+$color-t120-background: #F3F3F3;
+$color-t120-foreground: #262729;
+$color-t120-accents-0:  #FFCC32;
+$color-t120-accents-1:  #FE6A22;
+$color-t120-accents-2:  #F0342B;
+$color-t120-accents-3:  #C52E3F;
+$color-t120-accents-4:  #802B42;
+
+$color-polaroid-foreground: #1A1A1A;
+$color-polaroid-background: #FCFCF3;
+$color-polaroid-accents-0:  #008CC1;
+$color-polaroid-accents-1:  #95CC3B;
+$color-polaroid-accents-2:  #FEFF4C;
+$color-polaroid-accents-3:  #FD952F;
+$color-polaroid-accents-4:  #EB378F;
+
+$color-background: $color-polaroid-background;
+$color-foreground: $color-polaroid-foreground;
+$color-accents-0:  $color-polaroid-accents-0;
+$color-accents-1:  $color-polaroid-accents-1;
+$color-accents-2:  $color-polaroid-accents-2;
+$color-accents-3:  $color-polaroid-accents-3;
+$color-accents-4:  $color-polaroid-accents-4;
+
+$color-code-foreground:         $color-background;
+$color-code-background:         $color-foreground;
+$color-code-foreground-dimmed:  mix($color-code-foreground, $color-code-background, 66%);
+$color-code-0:                  $color-accents-0;
+$color-code-1:                  $color-accents-1;
+$color-code-2:                  $color-accents-2;
+$color-code-3:                  $color-accents-3;
+$color-code-4:                  $color-accents-4;

@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div>
+    {{ content }}
+</div>
+<hr/>
+<div class="main-posts">
+<h2>Latest Posts :</h2>
+
+{% include collection.html 
+    entries_layout="text" 
+    collection="posts"
+    include_date="true"
+%}
+</div>

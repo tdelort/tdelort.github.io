@@ -21,21 +21,18 @@ I also had the following tasks :
 You can learn more about the game on its [Itch.io page](https://uqac.itch.io/trouble-fete).  
 
 And/or in the trailer here :  
-<iframe width="640" height="360" src="https://www.youtube.com/embed/wFFiLPY-fLo?si=oECr0d-S5lMUuOV3&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<figure>
+  <iframe src="https://www.youtube.com/embed/wFFiLPY-fLo?si=oECr0d-S5lMUuOV3&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</figure>
 
 ## Pictures  
 
-![Image]({{site.baseurl}}/assets/images/portfolio/trouble_fete/main_menu.png)  
-*Main menu of the game*
+{% include image.html path="/assets/images/portfolio/trouble_fete/main_menu.png" alt="Image" caption="Main menu of the game" %}
 
-![Image]({{site.baseurl}}/assets/images/portfolio/trouble_fete/custo.png)  
-*Character Customization*
+{% include image.html path="/assets/images/portfolio/trouble_fete/custo.png" alt="Image" caption="Character Customization" %}
 
-![Image]({{site.baseurl}}/assets/images/portfolio/trouble_fete/gameplay_0.png)  
-*Gameplay : The parent is coming back and detects some trash from the party*
+{% include image.html path="/assets/images/portfolio/trouble_fete/gameplay_0.png" alt="Image" caption="Gameplay : The parent is coming back and detects some trash from the party" %}
 
-![Image]({{site.baseurl}}/assets/images/portfolio/trouble_fete/gameplay_1.png)  
-*Gameplay : To help gather trash, you can use bags (that can burst open if there is too much stuffed in them)*
+{% include image.html path="/assets/images/portfolio/trouble_fete/gameplay_1.png" alt="Image" caption="Gameplay : To help gather trash, you can use bags (that can burst open if there is too much stuffed in them)" %}
 
-![Image]({{site.baseurl}}/assets/images/portfolio/trouble_fete/gameplay_2.png)  
-*Gameplay : Some bigger objects will require cooperation to be moved (the table in the picture for example)*
+{% include image.html path="/assets/images/portfolio/trouble_fete/gameplay_2.png" alt="Image" caption="Gameplay : Some bigger objects will require cooperation to be moved (the table in the picture for example)" %}

@@ -24,14 +24,10 @@ Particle with force and collisions.
 
 RigidBody with force, torque, and collision detection (using linear Octree).
 
-![Image]({{site.baseurl}}/assets/images/portfolio/school_project_physics_engine/box_collision.gif)  
-*2 box colliding*
+{% include image.html path="/assets/images/portfolio/school_project_physics_engine/box_collision.gif" alt="Image" caption="2 box colliding" %}  
 
-![Image]({{site.baseurl}}/assets/images/portfolio/school_project_physics_engine/random_impulse.gif)  
-*Rigidbody subjected to random upward impulses when its origin falls below the z=0 plane*
+{% include image.html path="/assets/images/portfolio/school_project_physics_engine/random_impulse.gif" alt="Image" caption="Rigidbody subjected to random upward impulses when its origin falls below the z=0 plane" %}  
 
-![Image]({{site.baseurl}}/assets/images/portfolio/school_project_physics_engine/spring.gif)  
-*2 Rigidbody attached to springs (without collisions)*
+{% include image.html path="/assets/images/portfolio/school_project_physics_engine/spring.gif" alt="Image" caption="2 Rigidbody attached to springs (without collisions)" %}  
 
-![Image]({{site.baseurl}}/assets/images/portfolio/school_project_physics_engine/octree.png)  
-*Debug view of the octree structure used to reduce collision detection time*
+{% include image.html path="/assets/images/portfolio/school_project_physics_engine/octree.png" alt="Image" caption="Debug view of the octree structure used to reduce collision detection time" %}  

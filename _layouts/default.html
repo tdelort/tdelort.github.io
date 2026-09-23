@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% if page.layout == "home" %}
+            <title>{{ site.title }}</title>
+        {% else %}
+            <title>{{ site.title }} | {{ page.title }}</title>
+        {% endif %}
+        <link rel="stylesheet" href="/assets/css/styles.css"> 
+        <link rel="alternate" type="application/atom+xml" title="Miette" href="/feed.xml">
+    </head>
+    <body>
+        <div class="container">
+            {% include left.html %}
+            <div class="right">
+                <div class="main">
+                    <div class="main-header">
+                    {% if page.header_image %}
+                        <img src="{{ page.header_image | relative_url }}" alt="{{ page.header_image_alt }}">
+                    {% endif %}
+                    </div>
+                    {{ content }}
+                </div>
+                <!--<div class="footer">
+                    <a href="/feed.xml">RSS</a>
+                    <p>This site was made using Jekyll and a bespoke theme by myself</p>
+                </div>-->
+            </div>
+        </div>
+    </body>
+</html>

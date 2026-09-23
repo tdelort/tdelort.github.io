@@ -1,0 +1,19 @@
+<div class="collection-{{ include.entries_layout }}">
+    {% for elem in site[include.collection] %}
+    <div class="page">
+        <a href="{{ elem.url | relative_url }}">
+        {% if page.entries_layout == "cards" %}
+            <figure>
+                <img src="{{ elem.header.teaser }}" alt="{{ elem.title }} teaser image" />
+            </figure>
+        {% endif %}
+        {% if include.include_date %}
+            <span class="page-date">[{{ elem.date | date: "%b %-d, %Y" }}]</span>
+        {% endif %}
+            <span class="page-name">{{ elem.title }}</span>
+            <br/>
+            <span class="page-desc">> {{ elem.excerpt }}</span>
+        </a>
+    </div>
+    {% endfor %}
+</div>
