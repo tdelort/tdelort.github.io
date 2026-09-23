@@ -1,6 +1,6 @@
 ---
 title: "Veer Framework"
-permalink: /veer/
+permalink: /portfolio/veer/
 excerpt: "A HAL with many helpers to create a custom game engine with very few dependencies"
 header:
   teaser: /assets/images/portfolio/veer/teaser.png

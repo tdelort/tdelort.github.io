@@ -1,6 +1,6 @@
 ---
 title: "Trouble Fête"
-permalink: /trouble-fete/
+permalink: /portfolio/trouble-fete/
 excerpt: "Video game made as part of Ubisoft's 2022 Game Lab Competition"
 header:
   image: /assets/images/portfolio/trouble_fete/header.jpg

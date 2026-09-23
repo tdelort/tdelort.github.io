@@ -1,6 +1,6 @@
 ---
 title: "School Project : Physics Engine"
-permalink: "physics_engine"
+permalink: /portfolio/physics_engine/
 excerpt: "Physics Engine developed as part of 8INF935 course at UQAC"
 header:
   image: /assets/images/portfolio/school_project_physics_engine/header.png

@@ -1,6 +1,6 @@
 ---
 title: "WFC"
-permalink: /wfc/
+permalink: /portfolio/wfc/
 excerpt: "A quick Unity implementation of the Wave Function Collapse algorithm"
 header:
   image: /assets/images/portfolio/wfc/header.png
