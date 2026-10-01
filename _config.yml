@@ -3,6 +3,7 @@ subtitle: "One thought per sometimes"
 description: "Rendering Engineer trying to reduce the bloat in fast and pretty pixels"
 name: "Tristan Delort"
 url: "https://tdelort.github.io/"
+logo: /assets/images/icon.png
 repository: "tdelort/tdelort.github.io"
 
 plugins:
