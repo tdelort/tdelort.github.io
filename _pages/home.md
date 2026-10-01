@@ -12,4 +12,4 @@ This is a place where I'll talk about programming, **with a strong focus on rend
 
 I'm currently working on a hardware abstraction library with the goal to create a game engine, with as few dependencies as possible, while trying to minimize power consumption. Check out the **Veer Devblogs** posts below or the [Github page](https://github.com/tdelort/Veer) to learn more.  
 
-*The cover image was made using Veer*  
+<!-- *The cover image was made using Veer*   -->

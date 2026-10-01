@@ -4,61 +4,63 @@
     color: $color-code-foreground; 
 }
 
-.highlight pre { 
+pre.highlight { 
+    //border-top: 2px solid $color-code-foreground;
+    border: 1px solid $color-code-foreground;
     background-color: $color-code-background; 
     white-space: pre-wrap;
 }
 .highlight .lineno { 
     padding: 0 2ch;
-    border-right: 1px solid $color-code-foreground-dimmed;
-    color: $color-code-foreground-dimmed;
+    border-right: 1px solid $color-code-foreground;
+    color: $color-code-lineno;
 }
 .highlight .rouge-code { 
     padding: 0 2ch;
 }
 
-.highlight .hll { background-color: $color-code-0; }
-.highlight .c  { color: $color-code-1; } /* Comment */
-.highlight .cm { color: $color-code-1; } /* Comment.Multiline */
-.highlight .c1 { color: $color-code-1; } /* Comment.Single */
-.highlight .cs { color: $color-code-1; } /* Comment.Special */
-.highlight .cp { color: $color-code-4; } /* Comment.Preproc */
+.highlight .hll { background-color: $color-code-highlight; }
+.highlight .c  { color: $color-code-comment; } /* Comment */
+.highlight .cm { color: $color-code-comment; } /* Comment.Multiline */
+.highlight .c1 { color: $color-code-comment; } /* Comment.Single */
+.highlight .cs { color: $color-code-comment; } /* Comment.Special */
+.highlight .cp { color: $color-code-preproc; } /* Comment.Preproc */
 
-.highlight .err { color: $color-code-4; } /* Error */
+.highlight .err { color: $color-code-error; } /* Error */
 
-.highlight .k  { color: $color-code-0; } /* Keyword */
-.highlight .kc { color: $color-code-0; } /* Keyword.Constant */
-.highlight .kd { color: $color-code-0; } /* Keyword.Declaration */
-.highlight .kn { color: $color-code-0; } /* Keyword.Namespace */
-.highlight .kp { color: $color-code-0; } /* Keyword.Pseudo */
-.highlight .kr { color: $color-code-0; } /* Keyword.Reserved */
-.highlight .kt { color: $color-code-0; } /* Keyword.Type */
+.highlight .k  { color: $color-code-keyword; } /* Keyword */
+.highlight .kc { color: $color-code-keyword; } /* Keyword.Constant */
+.highlight .kd { color: $color-code-keyword; } /* Keyword.Declaration */
+.highlight .kn { color: $color-code-keyword; } /* Keyword.Namespace */
+.highlight .kp { color: $color-code-keyword; } /* Keyword.Pseudo */
+.highlight .kr { color: $color-code-keyword; } /* Keyword.Reserved */
+.highlight .kt { color: $color-code-keyword; } /* Keyword.Type */
 
-.highlight .l  { color: $color-code-3; } /* Literal */
-.highlight .ld { color: $color-code-3; } /* Literal.Date */
-.highlight .m  { color: $color-code-3; } /* Literal.Number */
-.highlight .s  { color: $color-code-3; } /* Literal.String */
-.highlight .mf { color: $color-code-3; } /* Literal.Number.Float */
-.highlight .mh { color: $color-code-3; } /* Literal.Number.Hex */
-.highlight .mi { color: $color-code-3; } /* Literal.Number.Integer */
-.highlight .mo { color: $color-code-3; } /* Literal.Number.Oct */
-.highlight .sb { color: $color-code-3; } /* Literal.String.Backtick */
-.highlight .sc { color: $color-code-3; } /* Literal.String.Char */
-.highlight .sd { color: $color-code-3; } /* Literal.String.Doc */
-.highlight .s2 { color: $color-code-3; } /* Literal.String.Double */
-.highlight .se { color: $color-code-3; } /* Literal.String.Escape */
-.highlight .sh { color: $color-code-3; } /* Literal.String.Heredoc */
-.highlight .si { color: $color-code-3; } /* Literal.String.Interpol */
-.highlight .sx { color: $color-code-3; } /* Literal.String.Other */
-.highlight .sr { color: $color-code-3; } /* Literal.String.Regex */
-.highlight .s1 { color: $color-code-3; } /* Literal.String.Single */
-.highlight .ss { color: $color-code-3; } /* Literal.String.Symbol */
-.highlight .il { color: $color-code-3; } /* Literal.Number.Integer.Long */
+.highlight .l  { color: $color-code-literal; } /* Literal */
+.highlight .ld { color: $color-code-literal; } /* Literal.Date */
+.highlight .m  { color: $color-code-literal; } /* Literal.Number */
+.highlight .s  { color: $color-code-literal; } /* Literal.String */
+.highlight .mf { color: $color-code-literal; } /* Literal.Number.Float */
+.highlight .mh { color: $color-code-literal; } /* Literal.Number.Hex */
+.highlight .mi { color: $color-code-literal; } /* Literal.Number.Integer */
+.highlight .mo { color: $color-code-literal; } /* Literal.Number.Oct */
+.highlight .sb { color: $color-code-literal; } /* Literal.String.Backtick */
+.highlight .sc { color: $color-code-literal; } /* Literal.String.Char */
+.highlight .sd { color: $color-code-literal; } /* Literal.String.Doc */
+.highlight .s2 { color: $color-code-literal; } /* Literal.String.Double */
+.highlight .se { color: $color-code-literal; } /* Literal.String.Escape */
+.highlight .sh { color: $color-code-literal; } /* Literal.String.Heredoc */
+.highlight .si { color: $color-code-literal; } /* Literal.String.Interpol */
+.highlight .sx { color: $color-code-literal; } /* Literal.String.Other */
+.highlight .sr { color: $color-code-literal; } /* Literal.String.Regex */
+.highlight .s1 { color: $color-code-literal; } /* Literal.String.Single */
+.highlight .ss { color: $color-code-literal; } /* Literal.String.Symbol */
+.highlight .il { color: $color-code-literal; } /* Literal.Number.Integer.Long */
 
-.highlight .o { color: $color-code-4; } /* Operator */
-.highlight .ow { color: $color-code-4; } /* Operator.Word */
+.highlight .o { color: $color-code-operator; } /* Operator */
+.highlight .ow { color: $color-code-operator; } /* Operator.Word */
 
-.highlight .p { color: $color-code-foreground-dimmed; } /* Punctuation */
+.highlight .p { color: $color-code-punctuation; } /* Punctuation */
 
 .highlight .n { color: $color-code-foreground; } /* Name */
 .highlight .na { color: $color-code-foreground; } /* Name.Attribute */
@@ -78,7 +80,7 @@
 .highlight .vc { color: $color-code-foreground; } /* Name.Variable.Class */
 .highlight .vg { color: $color-code-foreground; } /* Name.Variable.Global */
 .highlight .vi { color: $color-code-foreground; } /* Name.Variable.Instance */
-.highlight .nl { color: $color-code-0; } /* Name.Label */
+.highlight .nl { color: $color-code-keyword; } /* Name.Label */ // public: / private: 
 
 .highlight .w { color: $color-code-foreground; } /* Text.Whitespace */
 

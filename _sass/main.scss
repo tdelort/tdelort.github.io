@@ -7,12 +7,6 @@ $font-mono-stack: "JetBrains Mono", "Courier New", monospace;
 
 $hr-height: 5px;
 
-$gradient: $color-accents-0 20%, 
-           $color-accents-1 20%, $color-accents-1 40%, 
-           $color-accents-2 40%, $color-accents-2 60%,
-           $color-accents-3 60%, $color-accents-3 80%,
-           $color-accents-4 80%;
-
 body {
     font-family: $font-mono-stack; 
     font-size: medium; 
@@ -30,10 +24,6 @@ body {
 
 .container {
     display: flex;
-    // grid-template-areas: "left main"
-    //                      "left footer";
-    // grid-template-columns: 1fr 4fr;
-    // grid-template-rows: auto 5em;
 
     max-width: 160ch;
     margin: 0 auto;
@@ -50,11 +40,11 @@ hr {
 }
 
 a {
-  color: $color-accents-0;
+  color: $color-link;
 }
 
 a:hover {
-    color: $color-accents-3;
+    color: $color-link-hover;
     text-decoration: underline;
 }
 
@@ -64,7 +54,7 @@ a:hover {
 }
 
 .invisible_link:hover {
-    color: $color-accents-3;
+    color: $color-link-hover;
     text-decoration: underline;
 }
 
@@ -93,6 +83,24 @@ iframe {
     }
 }
 
+[class^="notice--"] {
+    padding: 0 2ch;
+    margin: 2em 0;
+    border-left-width: 1ch;
+    border-left-style: solid;
+}
+
+.notice--info {
+    border-left-color: $color-info;
+}
+
+.notice--warning {
+    border-left-color: $color-warn;
+}
+
+.notice--error {
+    border-left-color: $color-error;
+}
 
 
 .page {
@@ -104,12 +112,12 @@ iframe {
 
     .page-date {
         font-weight: bold;
-        color: $color-accents-0;
+        color: $color-link;
     }
 
     .page-name {
         font-weight: bold;
-        color: $color-accents-0;
+        color: $color-link;
     }
 
     .page-desc {
@@ -122,11 +130,11 @@ iframe {
     text-decoration: underline;
 
     .page-date {
-        color: $color-accents-3;
+        color: $color-link-hover;
     }
 
     .page-name {
-        color: $color-accents-3;
+        color: $color-link-hover;
     }
 }
 
@@ -157,6 +165,7 @@ iframe {
         }
 
         h2 {
+            padding-top: 1em;
             border-bottom: $hr-height / 2 solid $color-accents-0;
         }
 
@@ -247,7 +256,7 @@ iframe {
         .navigation-active::before {
             content: ">";
             width: 1ch;
-            color: $color-accents-0;
+            color: $color-link;
         }
     }
 
