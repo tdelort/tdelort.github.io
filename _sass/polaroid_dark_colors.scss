@@ -1,0 +1,49 @@
+$color-polaroid-foreground: #FCFCF3;
+$color-polaroid-background: #1A1A1A;
+$color-polaroid-accents-0:  #008CC1;
+$color-polaroid-accents-1:  #95CC3B;
+$color-polaroid-accents-2:  #FEFF4C;
+$color-polaroid-accents-3:  #FD952F;
+$color-polaroid-accents-4:  #EB378F;
+
+// Theme colors
+$color-background: $color-polaroid-background;
+$color-foreground: $color-polaroid-foreground;
+$color-accents-0:  $color-polaroid-accents-0;
+$color-accents-1:  $color-polaroid-accents-1;
+$color-accents-2:  $color-polaroid-accents-2;
+$color-accents-3:  $color-polaroid-accents-3;
+$color-accents-4:  $color-polaroid-accents-4;
+
+$color-link: $color-polaroid-accents-0;
+$color-link-hover: $color-polaroid-accents-3;
+$color-info: $color-polaroid-accents-0;
+$color-warn: $color-polaroid-accents-2;
+$color-error: $color-polaroid-accents-3;
+
+
+// Code highlighting colors
+$color-code-foreground:     $color-foreground;
+$color-code-background:     $color-background;
+$color-code-0:              mix($color-code-foreground, $color-accents-0, 10%);
+$color-code-1:              mix($color-code-foreground, $color-accents-1, 10%);
+$color-code-2:              mix($color-code-foreground, $color-accents-2, 10%);
+$color-code-3:              mix($color-code-foreground, $color-accents-3, 10%);
+$color-code-4:              mix($color-code-foreground, $color-accents-4, 10%);
+
+$color-code-lineno:         mix($color-code-foreground, $color-code-background, 50%);
+$color-code-punctuation:    mix($color-code-foreground, $color-code-background, 50%);
+$color-code-keyword:        $color-code-0;
+$color-code-highlight:      $color-code-2;
+$color-code-comment:        $color-code-1;
+$color-code-preproc:        $color-code-4;
+$color-code-literal:        $color-code-3;
+$color-code-error:          $color-code-4;
+$color-code-operator:       $color-code-4;
+
+// Misc 
+$gradient: $color-accents-0 20%, 
+           $color-accents-1 20%, $color-accents-1 40%, 
+           $color-accents-2 40%, $color-accents-2 60%,
+           $color-accents-3 60%, $color-accents-3 80%,
+           $color-accents-4 80%;

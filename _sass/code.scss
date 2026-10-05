@@ -1,15 +1,14 @@
-@import "colors.scss";
-
 .highlight {
     color: $color-code-foreground; 
+    overflow-x: scroll;
 }
 
 pre.highlight { 
     //border-top: 2px solid $color-code-foreground;
     border: 1px solid $color-code-foreground;
     background-color: $color-code-background; 
-    white-space: pre-wrap;
 }
+
 .highlight .lineno { 
     padding: 0 2ch;
     border-right: 1px solid $color-code-foreground;

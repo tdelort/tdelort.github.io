@@ -60,19 +60,6 @@ author:
   avatar   : "/assets/images/profile_placeholder_0.jpg"
   bio      : "Rendering Engineer. Worked at Spiders on GreedFall : The Dying World"
   location : "IDF, France"
-  links:
-    - label: "GitHub"
-      icon: "/assets/images/github_icon.svg"
-      url: "https://github.com/tdelort"
-    - label: "LinkedIn"
-      icon: "/assets/images/linkedin_icon.png"
-      url: "https://www.linkedin.com/in/tristan-delort/"
-    - label: "Email"
-      icon: "/assets/images/mail_icon.svg"
-      url: "mailto:tristan.delort@gmail.com"
-    - label: "RSS"
-      icon: "/assets/images/rss_icon.svg"
-      url: "/feed.xml"
 
 include:
   - _pages

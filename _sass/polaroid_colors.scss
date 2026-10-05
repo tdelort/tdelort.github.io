@@ -1,11 +1,3 @@
-// $color-sony-background: #F3F3F3;
-// $color-sony-foreground: #262729;
-// $color-sony-accents-0:  #FFCC32;
-// $color-sony-accents-1:  #FE6A22;
-// $color-sony-accents-2:  #F0342B;
-// $color-sony-accents-3:  #C52E3F;
-// $color-sony-accents-4:  #802B42;
-
 $color-polaroid-foreground: #1A1A1A;
 $color-polaroid-background: #FCFCF3;
 $color-polaroid-accents-0:  #008CC1;
@@ -23,8 +15,8 @@ $color-accents-2:  $color-polaroid-accents-2;
 $color-accents-3:  $color-polaroid-accents-3;
 $color-accents-4:  $color-polaroid-accents-4;
 
-$color-link: $color-accents-0;
-$color-link-hover: $color-accents-3;
+$color-link: $color-polaroid-accents-0;
+$color-link-hover: $color-polaroid-accents-3;
 $color-info: $color-polaroid-accents-0;
 $color-warn: $color-polaroid-accents-2;
 $color-error: $color-polaroid-accents-3;
