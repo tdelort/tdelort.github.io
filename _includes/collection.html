@@ -8,7 +8,7 @@
             </figure>
         {% endif %}
         {% if include.include_date %}
-            <span class="page-date">[{{ elem.date | date: "%b %-d, %Y" }}]</span>
+            <span class="page-date">[{{ elem.date | date: "%d %b %Y" }}]</span>
         {% endif %}
             <span class="page-name">{{ elem.title }}</span>
             <br/>
