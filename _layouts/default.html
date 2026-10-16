@@ -22,11 +22,27 @@
                     {% endif %}
                     </div>
                     {{ content }}
+
+                    {% if page.comments %}
+                    <hr />
+                    <div class="comment-section">
+                        <h2>Drop a comment !</h2>
+                        <script src="https://utteranc.es/client.js"
+                            repo="tdelort/tdelort.github.io"
+                            issue-term="pathname"
+                            label="comment"
+                            theme="github-light"
+                            crossorigin="anonymous"
+                            async>
+                        </script>
+                    </div>
+                    {% endif %}
                 </div>
                 <!--<div class="footer">
                     <a href="/feed.xml">RSS</a>
                     <p>This site was made using Jekyll and a bespoke theme by myself</p>
                 </div>-->
+
             </div>
         </div>
     </body>
