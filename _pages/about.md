@@ -17,7 +17,7 @@ Expect posts about topics that blends **low level programming**, **mathematics**
 
 Bear in mind when reading my posts that, **this is not the most serious blog** out there. I strongly believe that people should keep being **silly**, for what else should we do with our only shot at being alive if not having fun ? 
 
-***Fuck AI!*** All content produced for this blog or any mentioned project (text, code, images, meshes, music, whatever), as well as all the research behind it, are done without any AI. I won't use a tool (that I don't need) to save time (doing something I love) by destroying the planet (that we all happen to live on), especially when using said tool benefits only the wealthiest.  
+***No AI!*** All content produced for this blog or any mentioned project (text, code, images, meshes, music, whatever), as well as all the research behind it, are done without any AI. I won't use a tool (that I don't need) to save time (doing something I love) by destroying the planet (that we all happen to live on), especially when using said tool benefits only the wealthiest.  
 
 ## Ongoing
 
