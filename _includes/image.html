@@ -2,7 +2,11 @@
     <a href="{{site.baseurl}}{{ include.path }}">
     <img
         src="{{site.baseurl}}{{ include.path }}"
-        alt="{{ include.alt }}" />
+        alt="{{ include.alt }}" 
+        {% if include.height %}
+        style="height: {{ include.height }};"
+        {% endif %}
+        />
     </a>
     {% if include.caption %}
     <figcaption>{{ include.caption }}</figcaption>

@@ -1,0 +1,24 @@
+@startuml
+
+abstract class resource
+
+abstract class texture
+abstract class buffer
+
+abstract class dx12_resource
+
+class dx12_texture
+class dx12_buffer
+
+
+texture -up-|> resource
+buffer -up-|> resource
+
+dx12_texture -up-|> texture
+dx12_buffer -up-|> buffer
+
+dx12_texture -up-|> dx12_resource
+dx12_buffer -up-|> dx12_resource
+
+
+@enduml

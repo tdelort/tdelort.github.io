@@ -1,0 +1,11 @@
+@startuml
+
+abstract class resource
+
+abstract class texture
+abstract class buffer
+
+texture -up-|> resource
+buffer -up-|> resource
+
+@enduml

@@ -47,14 +47,12 @@ a:hover {
     text-decoration: underline;
 }
 
+@mixin invisible_link {
+}
+
 .invisible_link {
     color: $color-foreground;
     text-decoration: none;
-}
-
-.invisible_link:hover {
-    color: $color-link-hover;
-    text-decoration: underline;
 }
 
 .svg_icon {
@@ -68,7 +66,7 @@ img {
     max-width: 80ch;
     max-height: 45ch;
     object-fit: contain;
-    object-position: left;
+    object-position: center;
 }
 
 iframe {
@@ -81,8 +79,12 @@ iframe {
     flex-flow: row nowrap;
     align-items: center;
     justify-items: center;
+    justify-content: space-around;
 
-    figure {
+    // border-top: 1px solid $color-accents-0;
+    // border-bottom: 1px solid $color-accents-0;
+    padding: 2em 0;
+    figure, div, pre {
         flex: 1 1 auto;
         margin: 0 1ch;
     }
@@ -106,7 +108,46 @@ iframe {
 .notice--error {
     border-left-color: $color-error;
 }
+@keyframes rainbow_animation {
+  0%   {color:  $color-accents-0};
+  20%  {color:  $color-accents-1};
+  40%  {color:  $color-accents-2};
+  60%  {color:  $color-accents-3};
+  80%  {color:  $color-accents-4};
+  100% {color:  $color-accents-0};
+}
+.rainbow-text {
+    animation: rainbow_animation 1s infinite;
+}
 
+.small-text {
+    font-size: xx-small;
+}
+
+.hr-0 {
+    border-image: none;
+    border-color: $color-accents-0;
+}
+
+.hr-1 {
+    border-image: none;
+    border-color: $color-accents-1;
+}
+
+.hr-2 {
+    border-image: none;
+    border-color: $color-accents-2;
+}
+
+.hr-3 {
+    border-image: none;
+    border-color: $color-accents-3;
+}
+
+.hr-4 {
+    border-image: none;
+    border-color: $color-accents-4;
+}
 
 .page {
     padding-bottom: 1em;
@@ -159,8 +200,11 @@ iframe {
 
         img {
             object-fit: cover;
+            object-position: center;
+            max-width: 100%;
+            max-height: 100%;
             height: 100%;
-            width: 100%;
+            height: 100%;
         }
     }
 
@@ -283,31 +327,7 @@ iframe {
             margin: 0;
         }
     }
-    
-    .hr-0 {
-        border-image: none;
-        border-color: $color-accents-0;
-    }
 
-    .hr-1 {
-        border-image: none;
-        border-color: $color-accents-1;
-    }
-
-    .hr-2 {
-        border-image: none;
-        border-color: $color-accents-2;
-    }
-
-    .hr-3 {
-        border-image: none;
-        border-color: $color-accents-3;
-    }
-
-    .hr-4 {
-        border-image: none;
-        border-color: $color-accents-4;
-    }
 }
 
 .footer {
