@@ -12,9 +12,9 @@ tags:
   - vulkan
 ---
 
-One idea borrowed from [Ubisoft 2025 talk at REAC](https://enginearchitecture.org/downloads/REAC_2025_Anvil.pdf) that I use a lot in Veer is the way they implement class differently on **multiple platforms** in their *Fusion* Hardware Abstraction Layer. They use one common `.h` header, different `.cpp` depending on the backends (pretty standard here), and they **inject code inside the header** to add platform specific class members.
+One idea borrowed from [Ubisoft 2025 talk at REAC](https://enginearchitecture.org/downloads/REAC_2025_Anvil.pdf) that I use a lot in Veer is the way they implement classes differently on **multiple platforms** in their *Fusion* Hardware Abstraction Layer. They use one common `.h` header, different `.cpp` depending on the backends (pretty standard here), and they **inject code inside the header** to add platform specific class members.
 
-Because I am not a big fan of those cooking website where you need to scroll through an 10K+ pages long AO3 fan fiction<sup>\*</sup> on butternut squash before actually being able to read the recipe. So I won't waste time explaining every other approaches I tried before this (but feel free to message me / comment if you are curious).  
+I am not a big fan of those cooking website where you need to scroll through an 10K+ pages long AO3 fan fiction<sup>\*</sup> on butternut squash before actually being able to read the recipe. So I won't waste time explaining every other approaches I tried before this (but feel free to message me / comment if you are curious).  
 
 *<sup>\*</sup>Sending strength to you if you happen to read this during the AO3 4 weeks maintenance.*
 
