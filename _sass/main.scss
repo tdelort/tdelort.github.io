@@ -6,6 +6,12 @@ $font-mono-stack: "JetBrains Mono", "Courier New", monospace;
 
 $hr-height: 5px;
 
+
+$container-max-width: 160ch;
+$left-min-width: 26ch;
+$figure-max-width: 80ch;
+
+
 body {
     font-family: $font-mono-stack; 
     font-size: medium; 
@@ -21,13 +27,6 @@ body {
     margin: 0;
 }
 
-.container {
-    display: flex;
-
-    max-width: 160ch;
-    margin: 0 auto;
-    height: 100%;
-}
 
 hr {
     border: none;
@@ -63,7 +62,7 @@ a:hover {
 
 img {
     width: 100%;
-    max-width: 80ch;
+    max-width: $figure-max-width;
     max-height: 45ch;
     object-fit: contain;
     object-position: center;
@@ -71,14 +70,14 @@ img {
 
 
 figure {
-    max-width: 80ch;
+    max-width: $figure-max-width;
 }
 figcaption {
     text-align: center;
 }
 
 iframe {
-    width: 80ch;
+    width: $figure-max-width;
     height: 45ch;
 }
 
@@ -255,7 +254,13 @@ iframe {
     }
 }
 
+.container {
+    display: flex;
 
+    max-width: $container-max-width;
+    margin: 0 auto;
+    height: 100%;
+}
 
 .right {
     flex: 1 1 auto;
@@ -266,7 +271,7 @@ iframe {
 }
 
 .left {
-    flex: 0 0 26ch;
+    flex: 0 0 $left-min-width;
     // grid-area: left;
     text-align: left;
 
@@ -338,6 +343,61 @@ iframe {
     }
 
 }
+
+@media (max-width: $container-max-width) {
+    .container {
+        flex-direction: column;
+    }
+
+    .main {
+        padding: 0 2ch;
+
+        .main-header {
+            height: 8em;
+        }
+    }
+
+    .left {
+        flex: 0 0 auto;
+
+        .left-title p {
+            display: none;
+        }
+
+        .left-author {
+            display: none;
+        }
+        
+        .left-navigation ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .left-links {
+            display: none;
+        }
+
+        .hr-0 {
+            border: none;
+            border-top: $hr-height solid;
+            border-image: linear-gradient(to right, $gradient) 5;
+        }
+        .hr-1 {
+            display: none;
+        }
+        .hr-2 {
+            display: none;
+        }
+        .hr-3 {
+            display: none;
+        }
+        .hr-4 {
+            display: none;
+        }
+    }
+}
+
 
 .footer {
     text-align: center;  
