@@ -8,6 +8,7 @@ categories:
   - cosplay 
 tags:
   - sewing
+  - desmos
   - math
   - hatsune-miku
 ---
@@ -20,14 +21,14 @@ If you are only interested in the patterns, [click here to skip ahead](#making-t
 
 It took me a really long time to settle on a specific design that I **liked**, that I would feel **comfortable** wearing, and that **I could do** with my current skills.  
 
-**Snow Miku** has always been some of my favorite designs of hers, and it would be fitting since the show will take place in november. Snow Miku designs also range from "simple", with (on the left) the 2016 design, to **near impossible** with the 2021 one (on the right), so it can fit the "skill" constraint :  
+**Snow Miku** has always been some of my favorite designs of hers, and it would be fitting since the show will take place in november. There is a lot of Snow Miku designs and some fit my "skill" and "comfort" constraints :  
 
 <div class="gallery" markdown="1">
-{% include image.html path="/assets/images/posts/hohmann-transfer-skirt/snowmiku2016.jpg" alt="Snow Miku 2016" %}
-{% include image.html path="/assets/images/posts/hohmann-transfer-skirt/snowmiku2021.jpg" alt="Snow Miku 2021" %}
+{% include image.html path="/assets/images/posts/hohmann-transfer-skirt/snowmiku2016.jpg" alt="Snow Miku 2016" caption="Snow Miku 2016" %}
+{% include image.html path="/assets/images/posts/hohmann-transfer-skirt/snowmiku2021.jpg" alt="Snow Miku 2021" caption="Snow Miku 2021" %}
 </div>
 
-Snow Miku 2021 is in my TODO list since it's probably my favorite Snow Miku design of all time, but it will probably wait until I have the skills for it.  
+Snow Miku 2021 is in my TODO list since it's probably my favorite Snow Miku design of all time, but it will probably wait until I have the skills to really do it justice.  
 {: .notice--info }
 
 One design I almost settled on was this one [by ch-eescake](https://www.tumblr.com/ch-eesecake/795076279677452288/study-of-edmund-blair-leightons-the-accolade-lol) (left) based on [The Accolade by Edmund Blair Leighton](https://commons.wikimedia.org/wiki/File:Accolade_by_Edmund_Blair_Leighton.jpg) (right) :  
@@ -38,9 +39,9 @@ One design I almost settled on was this one [by ch-eescake](https://www.tumblr.c
 {% include image.html path="/assets/images/posts/hohmann-transfer-skirt/edmund_blair_leighton_accolade.jpg" alt="Edmund Blair Leighton's Accolade painting" %}
 </div>
 
-But something that bothered me with my last cosplay (Marcille from Dungeon Meshi) is that **you don't get to wear them a lot** outside of Cons. Thus, one goal I added for my Miku Expo cosplay is to be able to put as many parts of it in my day to day wardrobe (which is for transgender related reasons in a dire need of being reworked).  
+But something that bothered me with my last cosplay (Marcille from Dungeon Meshi) is that you don't get to wear them a lot outside of Cons. Thus, one goal I added for my Miku Expo cosplay is to be able to put as many parts of it in my day to day wardrobe (which is for transgender related reasons in a dire need of being reworked).  
 
-Camellia has always been an artist I really liked, and earlier this year he released a new vocaloid album, **Insomnia C(o)urse**, with a cover art by [Temmie](https://tuyoki.itch.io/) !!  
+Camellia has always been an artist I really liked, and earlier this year he released a new vocaloid album, **Insomnia C(o)urse**, with a cover art by [Temmie](https://tuyoki.itch.io/) (that you might know for Undertale/Deltarune or even the Dweller's Empty Path).  
 
 {% include image.html path="/assets/images/posts/hohmann-transfer-skirt/insomnia_course_miku.jpg" alt="Insomnia Course Miku" %}
 
@@ -69,9 +70,9 @@ There is **a lot** of patterns online for asymmetrical skirts, but most of them 
 To be fair, there might be exactly the pattern I just made, but it was faster to do it than to find it.  
 {: .notice--info }
 
-We have the first skirt making a cone shape, and now we need some kind of other skirt, which would fit the **same cone** but without everything below **a slanted plane**. A plane that starts at a desired height on one side (let's call it the short side), and ends at the same length as the circle skirt (on the opposite long side).  
+We have the first skirt making a cone shape, and now we need some kind of other skirt, which would fit the same **cone** but without everything below a slanted **plane**. A plane that starts at a desired height on one side (let's call it the short side), and ends at the same length as the circle skirt (on the opposite long side).  
 
-When you look at how we would construct a pattern that fits this description, we find that it should be an **ellipse** (because it's a cone plane intersection) with one **focus point** being the **center of the hole** to fit your body, and **tangent to 2 circles** : one with radius equal to the length of a circle skirt as long as the short side of the skirt, and another one equal to the length of a circle skirt as long as the long side.  
+When you look at how we would construct a pattern that fits this description, we find that it should be an **ellipse** with one **focus point** being the **center of the hole** to fit your body (because it's a cone plane intersection), and **tangent** to 2 **circles** : one with radius equal to the length of a circle skirt as long as the short side, and another one equal to the length of a circle skirt as long as the long side.  
 
 {% include image.html path="/assets/images/posts/hohmann-transfer-skirt/hohmann_transfer_pattern.png" alt="Schema of the described pattern" caption="In dashed purple lines, the 2 tangent circles, and in black, the hole" %}
 
@@ -86,12 +87,12 @@ Below you can see a Hohmann Transfer manoeuver in **Kerbal Space Program**. The 
 
 {% include image.html path="/assets/images/posts/hohmann-transfer-skirt/hohmann_transfer_ksp.png" alt="Screenshot of a hohmann transfer manoeuver in Kerbal Space Program" %}
 
-This post could have been posted earlier if I hadn't launched KSP to take screenshots instead of using the picture from wikipedia like everyone >:3 
+This post would have been posted before [my previous Veer Devblog](/_posts/2026-11-04-fusion-like-cross-platform-code.md) if I hadn't launched KSP to take screenshots instead of using the picture from wikipedia like everyone >:3. I love this game sooooo much! 
 {: .notice--info }
 
-In this analogy, the transfer orbit is the asymetrical skirt, and the target orbit is our big circle skirt. This is fitting for a character like Miku (like Snow Miku, there is quite a lot of **Space Miku**). And she actually went to space through drawings and messages on JAXA's Akatsuki probe, among which we can find this pure gem, the Miku version of the **Pioneer Plaque** :  
+In this analogy, the transfer orbit is the asymetrical skirt, and the target orbit is our big circle skirt. Space stuff is really fitting for a character like Miku (like Snow Miku, there is quite a lot of **Space Miku**). And she actually went to space through drawings and messages on JAXA's Akatsuki probe, among which we can find this pure gem :  
 
-{% include image.html path="/assets/images/posts/hohmann-transfer-skirt/pioneer_miku.jpg" alt="Screenshot of a hohmann transfer manoeuver in Kerbal Space Program" %}
+{% include image.html path="/assets/images/posts/hohmann-transfer-skirt/pioneer_miku.jpg" alt="Screenshot of a hohmann transfer manoeuver in Kerbal Space Program" caption="The Miku version of the Pioneer Plaque" %}
 
 ## Making the skirts
 
@@ -123,7 +124,7 @@ Everything **purple** in the graph is related to the **elliptical skirt**. An el
 
 {% include image.html path="/assets/images/posts/hohmann-transfer-skirt/desmos_params_2.png" alt="" %}
 
-The `v_ratio` slider is to control the length of the short side : 0 and the short side is tangent to the hole, 1 and you have a circle skirt.  
+The `v_ratio` slider is to control the length of the short side : 0 and the short side is tangent to the hole (which is bad because you need a bit of fabric here), 1 and you have a circle skirt.  
 
 You just have to transfer some points along the edge of the ellipse, and then you link them trying to be as smooth as possible (which can be a pain on some fabric).  
 
@@ -143,7 +144,7 @@ Finally, you can unfold once and transfer the hole measurements and cut while it
 
 {% include image.html path="/assets/images/posts/hohmann-transfer-skirt/pattern_transfer_2.jpg"  %}
 
-### Draw the rest of the f***ing howl
+### Draw the rest of the f\*\*\*ing howl
 
 Now that your fabric is cut, you can finish the skirt by adding a lot of **time consuming details**. 
 
@@ -157,13 +158,18 @@ And for the elliptical orbit skirt, I decided to add **ruffles** and **lace** al
 The perimeter of the ellipse is shorter than the circle skirt, BUT ruffles require that you multiply that length. So if you thought that the circle skirt rolled hem was painfully long, adding ruffles will be at least twice the pain.  
 {: .notice--error }
 
-## The result
+## The results
 
 Some pictures of the finished products !!!
 
+<div class="gallery" markdown="1">
+{% include image.html path="/assets/images/posts/hohmann-transfer-skirt/results_both_skirts.jpg" caption="Both skirts"  %}
+{% include image.html path="/assets/images/posts/hohmann-transfer-skirt/results_circle_skirt.jpg" caption="Only the circle skirt" %}
+{% include image.html path="/assets/images/posts/hohmann-transfer-skirt/results_pin.jpg" caption="The pin used to hold the asymmetrical skirt" %}
+</div>
 
+For the flower pin, I followed a tutorial on how to make a rose in fabric I found on TikTok. There are loads out there, and most of them follow the same idea. Create a fabric tube (but add an offset when sewing along the tube to create a bit of volume). Then gather it like ruffles, and roll it into a rose.  
 
-The orbit skirt ended up being a bit longer because of the added ruffles but I really like the look of it.  
+I might add some inner structure, like a shallow petticoat, but as far as the skirts go, I'm quite happy how it turned out :3
 
-I might add some inner structure, like a small petticoat, but as far as the skirts go, I'm quite happy how it turned out :3
-
+The orbit skirt ended up being a bit longer because of the added ruffles but I really like the look of it (and the petticoat will most likely fix the length issue). I can also tie it higher on the short side with the pin but I'll need to work a bit more on it because it's a bit finicky at the moment.  

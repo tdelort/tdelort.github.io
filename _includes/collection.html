@@ -1,5 +1,13 @@
 <div class="collection-{{ include.entries_layout }}">
-    {% for elem in site[include.collection] %}
+
+{% if include.collection %}
+    {% assign list = site[include.collection] %}
+{% endif %}
+{% if include.category %}
+    {% assign list = site.categories[include.category] %}
+{% endif %}
+
+    {% for elem in list %}
     <div class="page">
         <a href="{{ elem.url | relative_url }}">
         {% if page.entries_layout == "cards" %}
