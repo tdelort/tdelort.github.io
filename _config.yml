@@ -26,6 +26,7 @@ defaults:
       layout: post
       author_profile: true
       comments: true
+      toc: true
   # _pages
   - scope:
       path: "_pages"
@@ -42,6 +43,7 @@ defaults:
       layout: default
       author_profile: true
       comments: true
+      toc: true
 
 comments:
   provider: "utterances"

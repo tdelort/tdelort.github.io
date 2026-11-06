@@ -24,9 +24,11 @@
         </nav> 
         <hr class="hr-1"/>
     </div>
+    {% if page.toc %}
     <div class="left-toc" markdown="1">
         {% include toc.html html=content h_min=2 h_max=3 item_class="left-toc-item-%level%" %}
     </div>
+    {% endif %}
     <div class="left-links">
         <hr class="hr-2"/>
         <ul>

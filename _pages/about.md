@@ -1,11 +1,12 @@
 ---
 permalink: /about/
 title: "About"
+toc: true
 ---
 
 # About Me
 
-Hiya ! I'm **Miette** (any/all<sup>\*</sup>) :3 You might know me outside of this blog as *Tristan Delort* (but this does not sounds even half as silly as Miette).  
+Hiya ! I'm **Miette** (she/they<sup>\*</sup>) :3 You might know me outside of this blog as *Tristan Delort* (but this does not sounds even half as silly as Miette).  
 
 I'm a **Rendering Engineer** who worked at **Spiders** on the last **GreedFall** opus, during the last 3 years of the studio before its liquidation.  
 
