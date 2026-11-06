@@ -8,6 +8,7 @@ repository: "tdelort/tdelort.github.io"
 
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 markdown: kramdown
 kramdown:
