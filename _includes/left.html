@@ -6,10 +6,6 @@
         <p>{{ site.subtitle }}</p>
         <hr class="hr-0"/>
     </div>
-    <div class="left-author">
-        <p>{{ site.author.bio }}</p>
-        <hr class="hr-1"/>
-    </div>
     <div class="left-navigation">
         <nav>
             <ul>
@@ -26,10 +22,13 @@
             {% endfor %}
             </ul>
         </nav> 
-        <hr class="hr-2"/>
+        <hr class="hr-1"/>
+    </div>
+    <div class="left-toc" markdown="1">
+        {% include toc.html html=content h_min=2 h_max=3 item_class="left-toc-item-%level%" %}
     </div>
     <div class="left-links">
-        <hr class="hr-3"/>
+        <hr class="hr-2"/>
         <ul>
             <li>
                 <a class="invisible_link" href="https://github.com/tdelort">
